@@ -17,10 +17,16 @@ Formar recursos humanos con capacidad para utilizar modelos de analítica avanza
 
 - [Sitio web oficial de la Maestría en Ciencia de Datos](https://www.fcfm.uanl.mx/posgrados/maestria-en-ciencia-de-datos)
 
-En este repositorio, encontrarás:
-
-- Proyectos prácticos que aplican técnicas de aprendizaje automático.
-- Ejercicios desarrollados durante la clase para fortalecer el entendimiento de los algoritmos.
-- Documentación y análisis de resultados obtenidos en cada proyecto.
-
+### Tareas
+- [Tarea 1](tareas/tarea1)
+- [Tarea 2](tareas/tarea2)
+- [Tarea 3](tareas/tarea3)
+- [Tarea 4](tareas/tarea4)
+- [Tarea 5](tareas/tarea5)
+- [Tarea 6](tareas/tarea6)
+- [Tarea 7](tareas/tarea7)
+- [Tarea 8](tareas/tarea8)
+- [Tarea 9](tareas/tarea9)
+- [Tarea 10](tareas/tarea10)
+ 
 Este portafolio no solo refleja el progreso académico en la materia, sino también la capacidad para resolver problemas complejos utilizando métodos de ciencia de datos avanzados.
