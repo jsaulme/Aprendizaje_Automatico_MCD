@@ -21,7 +21,7 @@
 
 <h3 align="center">📝 Tareas</h3>
 <p align="center">
-  <a href="tareas/tarea1">Tarea 1</a> • 
+  <a href=""https://github.com/jsaulme/Aprendizaje_Automatico_MCD/blob/main/tareas/Tarea1.ipynb"">Tarea 1</a> • 
   <a href="tareas/tarea2">Tarea 2</a> • 
   <a href="tareas/tarea3">Tarea 3</a> • 
   <a href="tareas/tarea4">Tarea 4</a> • 
