@@ -19,13 +19,13 @@
   Formar recursos humanos con capacidad para utilizar modelos de analítica avanzada, aprendizaje automático, métodos estadísticos y matemáticos de ciencia de datos, con el fin de generar alternativas de solución a las problemáticas en el manejo de grandes volúmenes de información de las organizaciones públicas y privadas, en los ámbitos local, nacional e internacional.
 </p>
 
-<h3 align="center">📝 Tareas Completas </h3>
+<h3 align="center" style="font-size: 24px; color: #4CAF50;" >📝 Tareas Completas </h3>
 <p align="center">
   <a href="tareas/tarea1.ipynb">Tarea 1</a> • 
   <a href="tareas/tarea2.ipynb">Tarea 2</a> • 
 </p>
 
-<h4 align="center">📝 Tareas Proximas </h4>
+<h4 align="center" style="font-size: 16px; color: #999;" >📝 Tareas Proximas </h4>
 <p align="center">
   <a href="tareas/tarea3">Tarea 3</a> • 
   <a href="tareas/tarea4">Tarea 4</a> • 
