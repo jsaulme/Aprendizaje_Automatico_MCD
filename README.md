@@ -22,12 +22,12 @@
 <h3 align="center" style="font-size: 24px; color: #4CAF50;" >📝 Tareas Completas </h3>
 <p align="center">
   <a href="tareas/tarea1.ipynb">Tarea 1</a> • 
-  <a href="tareas/tarea2.ipynb">Tarea 2</a> • 
+  <a href="tareas/tarea2.ipynb">Tarea 2</a> •
+  <a href="tareas/tarea3.ipynb">Tarea 3</a> •
 </p>
 
 <h4 align="center" style="font-size: 16px; color: #999;" >📝 Tareas Proximas </h4>
 <p align="center">
-  <a href="tareas/tarea3">Tarea 3</a> • 
   <a href="tareas/tarea4">Tarea 4</a> • 
   <a href="tareas/tarea5">Tarea 5</a> • 
   <a href="tareas/tarea6">Tarea 6</a> • 
