@@ -24,12 +24,12 @@
   <a href="tareas/tarea1.ipynb">Tarea 1</a> • 
   <a href="tareas/tarea2.ipynb">Tarea 2</a> •
   <a href="tareas/tarea3.ipynb">Tarea 3</a> •
-  <a href="tareas/tarea4.ipynb">Tarea 4</a> • 
+  <a href="tareas/tarea4.ipynb">Tarea 4</a> •
+  <a href="tareas/tarea5.ipynb">Tarea 5</a> •
 </p>
 
 <h4 align="center" style="font-size: 16px; color: #999;" >📝 Tareas Proximas </h4>
 <p align="center">
-  <a href="tareas/tarea5">Tarea 5</a> • 
   <a href="tareas/tarea6">Tarea 6</a> • 
   <a href="tareas/tarea7">Tarea 7</a> • 
   <a href="tareas/tarea8">Tarea 8</a> • 
