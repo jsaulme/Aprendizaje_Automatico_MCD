@@ -23,7 +23,7 @@
 <p align="center">
   <a href="tareas/tarea1.ipynb">Tarea 1</a> • 
   <a href="tareas/tarea2.ipynb">Tarea 2</a> •
-  <a href="tareas/tarea3.ipynb">Tarea 3</a> •
+  <a href="tareas/03_sel_caract_updated.ipynb">Tarea 3</a> •
   <a href="tareas/tarea4.ipynb">Tarea 4</a> •
   <a href="04_no_supervisado_updated.ipynb">Tarea 5</a> •
   <a href="tareas/articulo.tex">Articulo Latex</a> •
