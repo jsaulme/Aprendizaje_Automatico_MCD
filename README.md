@@ -27,7 +27,7 @@
   <a href="tareas/tarea4.ipynb">Tarea 4</a> •
   <a href="04_no_supervisado_updated.ipynb">Tarea 5</a> •
   <a href="tareas/articulo.tex">Articulo Latex</a> •
-  <a href="Elsevier_Article__elsarticle__Template.pdf">Articulo PDF</a> •
+  <a href="tareas/Elsevier_Article__elsarticle__Template.pdf">Articulo PDF</a> •
   
 </p>
 
