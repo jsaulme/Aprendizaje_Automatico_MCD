@@ -21,7 +21,7 @@
 
 <h3 align="center" style="font-size: 24px; color: #4CAF50;" >📝 Tareas Completas </h3>
 <p align="center">
-  <a href="tareas/tarea1.ipynb">Tarea 1</a> • 
+  <a href="tareas/01_datos_update.ipynb">Tarea 1</a> • 
   <a href="tareas/tarea2.ipynb">Tarea 2</a> •
   <a href="tareas/03_sel_caract_updated.ipynb">Tarea 3</a> •
   <a href="tareas/tarea4.ipynb">Tarea 4</a> •
