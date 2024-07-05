@@ -24,7 +24,7 @@
   <a href="tareas/01_datos_update.ipynb">Tarea 1 Datos</a> • 
   <a href="tareas/02_estadisticos_update.ipynb">Tarea 2 Estadisticos</a> •
   <a href="tareas/03_sel_caract_updated.ipynb">Tarea 3 Seleccion de Caracteristicas</a> •
-  <a href="tareas/tarea4.ipynb">Tarea 4</a> •
+  <a href="tareas/04_no_supervisado_updated.ipynb">Tarea 4 No Supervisado</a> •
   <a href="04_no_supervisado_updated.ipynb">Tarea 5</a> •
   <a href="tareas/articulo.tex">Articulo Latex</a> •
   <a href="tareas/Elsevier_Article__elsarticle__Template.pdf">Articulo PDF</a> •
