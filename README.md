@@ -28,6 +28,7 @@
   <a href="tareas/05_Aprendizaje_Supervisado.ipynb">Tarea 5 Aprendizaje Supervisado</a> •
 
 <h3 align="center" style="font-size: 24px; color: #4CAF50;" >📝 Articulo </h3>
+<p align="center">
   <a href="tareas/articulo.tex">Articulo Latex</a> •
   <a href="tareas/Elsevier_Article__elsarticle__Template.pdf">Articulo PDF</a> •
   
