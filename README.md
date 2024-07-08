@@ -26,6 +26,8 @@
   <a href="tareas/03_sel_caract_updated.ipynb">Tarea 3 Seleccion de Caracteristicas</a> •
   <a href="tareas/04_no_supervisado_updated.ipynb">Tarea 4 No Supervisado</a> •
   <a href="tareas/05_Aprendizaje_Supervisado.ipynb">Tarea 5 Aprendizaje Supervisado</a> •
+  <a href="tareas/06_Clasificacion.ipynb">Tarea 6 Clasificacion</a> • 
+ 
 
 <h3 align="center" style="font-size: 24px; color: #4CAF50;" >📝 Articulo Preliminar</h3>
 <p align="center">
@@ -36,7 +38,6 @@
 
 <h4 align="center" style="font-size: 16px; color: #999;" >📝 Tareas Proximas </h4>
 <p align="center">
-  <a href="tareas/tarea6">Tarea 6</a> • 
   <a href="tareas/tarea7">Tarea 7</a> • 
   <a href="tareas/tarea8">Tarea 8</a> • 
   <a href="tareas/tarea9">Tarea 9</a> • 
