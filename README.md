@@ -28,6 +28,8 @@
   <a href="tareas/05_Aprendizaje_Supervisado.ipynb">Tarea 5 Aprendizaje Supervisado</a> •
   <a href="tareas/06_Clasificacion.ipynb">Tarea 6 Clasificacion</a> • 
   <a href="tareas/06_Clasificacion.ipynb#07_Metricas">Tarea 7 Metricas Desempenio</a> •
+  <a href="tareas/08_Metricas_Desempeno.ipynb">Tarea 8 Metricas de Desempenio</a> •
+  <a href="tareas/09_Diseño_Experimental.ipynb">Tarea 9 Disenio experimental</a> •
 
  
 
@@ -40,8 +42,6 @@
 
 <h4 align="center" style="font-size: 16px; color: #999;" >📝 Tareas Proximas </h4>
 <p align="center">
-  <a href="tareas/tarea8">Tarea 8</a> • 
-  <a href="tareas/tarea9">Tarea 9</a> • 
   <a href="tareas/tarea10">Tarea 10</a>
 </p>
 
