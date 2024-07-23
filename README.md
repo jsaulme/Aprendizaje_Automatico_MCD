@@ -30,13 +30,14 @@
   <a href="tareas/06_Clasificacion.ipynb#07_Metricas">Tarea 7 Metricas Desempenio</a> •
   <a href="tareas/08_Metricas_Desempeno.ipynb">Tarea 8 Metricas de Desempenio</a> •
   <a href="tareas/09_Diseño_Experimental.ipynb">Tarea 9 Disenio experimental</a> •
-
+  <a href="tareas/articulo.tex">Articulo Latex</a> •
+  <a href="tareas/articulo.pdf">Articulo PDF</a> •
  
 
 <h3 align="center" style="font-size: 24px; color: #4CAF50;" >📝 Articulo Preliminar</h3>
 <p align="center">
-  <a href="tareas/articulo.tex">Articulo Latex</a> •
-  <a href="tareas/Elsevier_Article__elsarticle__Template.pdf">Articulo PDF</a> •
+  
+  
   
 </p>
 
