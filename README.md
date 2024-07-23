@@ -48,9 +48,3 @@
 <p align="justify">
   Este portafolio no solo refleja el progreso académico en la materia, sino también la capacidad para resolver problemas complejos utilizando métodos de ciencia de datos avanzados.
 </p>
-
-
-1. Adding a GIF from an external URL to markdown.
-
-![color picker]([https://bobbyhadz.com/images/blog/change-vscode-integrated-terminal-colors/hover-over-color.gif](https://th.bing.com/th/id/R.7821de1943f274112c9a1931721c2880?rik=of6NAi2F8%2fdcmg&pid=ImgRaw&r=0))
-
