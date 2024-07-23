@@ -42,7 +42,7 @@
 
 <h4 align="center" style="font-size: 16px; color: #999;" >📝 Tareas Proximas </h4>
 <p align="center">
-  <a href="tareas/tarea10">Checa las tareas pendientes!</a>
+  <a href="tareas/mission-complette.gif">Checa las tareas pendientes!</a>
 </p>
 
 <p align="justify">
