@@ -1,123 +1,175 @@
 \documentclass[preprint,12pt]{elsarticle}
 
+\usepackage{graphicx} % Paquete para incluir gráficos
+\usepackage{amsmath}  % Paquete para matemáticas
+
 \begin{document}
 
 \begin{frontmatter}
 
-\title{Análisis de Clustering y Métodos de Pronóstico para Series Temporales Geográficas en el Dataset Global Superstore 2018}
+%% Título del artículo
+\title{Análisis y Predicción de Beneficios Negativos en Ventas Utilizando Técnicas de Aprendizaje Automático}
 
-\author[1]{Saul Martínez}
-\affiliation[1]{organization={Facultad de Ciencias Físico Matemáticas}, 
-  addressline={Universidad Autónoma de Nuevo León}, 
-  city={Monterrey},
-  postcode={66451},
-  country={México}}
+%% Autores y afiliaciones
+\author[UANL]{Saul Martínez}
+\address[UANL]{Universidad Autónoma de Nuevo León, Mexico}
 
-
+%% Resumen del artículo
 \begin{abstract}
-Este estudio presenta un análisis de clustering y métodos de pronóstico aplicados al dataset de Global Superstore 2018. Se realizó un clustering con K-means para identificar grupos de productos o clientes con características similares, determinando el número óptimo de clusters mediante el método del codo y el índice de Davies-Bouldin. Adicionalmente, se aplicó el algoritmo DBSCAN y se evaluó su rendimiento utilizando varias métricas. Los resultados de los diferentes métodos de clustering fueron comparados y discutidos.
-
-En cuanto a los métodos de pronóstico para series temporales geográficas, se resumió el estudio de Huddleston, Porter y Brown sobre la previsión de eventos delictivos en Pittsburgh. Se discutió el uso de modelos ARIMA y métodos de pronóstico de arriba hacia abajo, destacando la importancia de seleccionar el método de pronóstico adecuado según las necesidades específicas del análisis y las capacidades del analista.
-
+Un análisis exploratorio de datos (EDA) revela las principales tendencias y relaciones en los datos, destacando los posibles impulsores de los beneficios negativos. Se aplicaron técnicas de selección de características, incluidas SelectKBest y DecisionTreeRegressor, para identificar las características más relevantes para la predicción de beneficios. Se entrenó y evaluó un modelo DecisionTreeRegressor utilizando métricas de error cuadrático medio (MSE) y error absoluto medio (MAE), demostrando un rendimiento aceptable en la predicción de beneficios. Además, se utilizaron algoritmos de clustering, KMeans y DBSCAN, para segmentar clientes y productos en función de sus contribuciones a los beneficios negativos. El análisis identificó clusters distintos con altos beneficios negativos, descubriendo características demográficas y de mercado específicas. El estudio proporciona recomendaciones para la investigación de mercado, segmentación, estrategias de precios y monitoreo continuo para mejorar la rentabilidad del negocio. Los hallazgos ofrecen una base sólida para la toma de decisiones basada en datos y las intervenciones estratégicas destinadas a mejorar los resultados financieros.
 \end{abstract}
 
+%% Palabras clave
 \begin{keyword}
-Clustering \sep K-means \sep DBSCAN \sep Series Temporales \sep ARIMA \sep Métodos de Pronóstico \sep Global Superstore 2018
+Análisis de datos \sep Beneficios negativos \sep Selección de características \sep SelectKBest \sep DecisionTreeRegressor \sep Predicción \sep Error cuadrático medio (MSE) \sep Error absoluto medio (MAE) \sep Clustering \sep KMeans \sep DBSCAN 
 \end{keyword}
 
 \end{frontmatter}
 
+%% Sección de Introducción
 \section{Introducción}
-Este documento presenta un análisis de clustering y métodos de pronóstico aplicados al dataset de Global Superstore 2018. Se emplearon técnicas avanzadas para identificar patrones en los datos de ventas y para predecir eventos futuros en contextos geográficos ruidosos.
+En este estudio, exploramos y analizamos un conjunto de datos de ventas utilizando diversas técnicas de análisis de datos y aprendizaje automático. Nuestro objetivo principal es entender y predecir los beneficios negativos en las ventas. Para ello, hemos realizado un análisis exploratorio de datos (EDA), aplicado técnicas de agrupación como KMeans y DBSCAN, y utilizado varios modelos de predicci
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\linewidth]{Imagenes articulo/qqplot.png} 
+    \caption{El QQ plot compara la distribución de los datos de 'Profit' con una distribución normal teórica. La distribución observada no sigue la línea teórica recta, mostrando una curvatura significativa. 
+    En los extremos inferiores (izquierda del gráfico), los puntos se encuentran por debajo de la línea teórica, indicando la presencia de valores más bajos de lo esperado en una distribución normal.
+    En los extremos superiores (derecha del gráfico), los puntos se encuentran por encima de la línea teórica, sugiriendo la presencia de valores más altos de lo esperado. 
+    Estas observaciones indican que la distribución de 'Profit' tiene colas más gruesas (kurtosis positiva), lo que implica la existencia de valores extremos. En resumen, los datos de 'Profit' se desvían significativamente de una distribución normal.}
+    \label{fig:qqplot_profit}
+\end{figure}
+
+Nuestro análisis se basa en el conjunto de datos “Global Superstore”, que contiene información detallada sobre las ventas, incluyendo la cantidad de productos vendidos, los descuentos aplicados, los costos de envío, y más. Hemos preprocesado y limpiado estos datos, y luego los hemos explorado para identificar patrones y relaciones entre las diferentes características.
+
+Además, hemos aplicado técnicas de selección de características para identificar las más relevantes para predecir los beneficios. Entre estas características, encontramos que las ventas, los descuentos, y los costos de envío son particularmente importantes.
+
+Finalmente, hemos entrenado varios modelos de predicción y los hemos evaluado utilizando métricas como el error cuadrático medio (MSE) y el error absoluto medio (MAE). Nuestros resultados muestran que estos modelos pueden predecir con precisión los beneficios negativos en las ventas.
+
+Este estudio proporciona una base sólida para la toma de decisiones informadas y la mejora de la rentabilidad del negocio. Además, nuestras técnicas y hallazgos pueden ser útiles para otros investigadores y profesionales que trabajen en áreas similares.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\linewidth]{Imagenes articulo/Captura de pantalla 2024-07-22 161531.png} 
+    \caption{El histograma muestra la distribución de los valores de ganancia en diferentes regiones. Las barras representan las ganancias, y el eje x enumera las regiones. Observamos picos en algunas regiones y una variación en las ganancias.}
+    \label{fig:qqplot_profit}
+\end{figure}
+
+%% Sección de Metodología
 \section{Metodología}
+En esta sección, describimos los métodos y técnicas utilizados para analizar los datos y lograr nuestros objetivos de investigación. Nuestro enfoque se divide en las siguientes etapas:
 
-El presente estudio tuvo como objetivo analizar el comportamiento de los profits negativos en una empresa a lo largo del tiempo y pronosticar su comportamiento futuro utilizando un modelo ARIMA. Para ello, se utilizaron los datos de profits mensuales de la empresa desde enero de 2018 hasta diciembre de 2022. Los datos se obtuvieron de una base de datos interna de la empresa.
+\subsection{Preprocesamiento de Datos}
+\begin{itemize}
+    \item Cargamos el conjunto de datos "Global Superstore" utilizando la librería pandas.
+    \item Especificamos los tipos de datos de cada columna y asignamos la columna "Row ID" como índice.
+    \item Creamos nuevas columnas para el año, mes y día de pedido y entrega, así como para el tiempo de entrega.
+    \item Eliminamos las columnas innecesarias.
+\end{itemize}
 
-El primer paso fue realizar un análisis exploratorio de los datos para comprender su comportamiento. Esto incluyó el cálculo de estadísticas descriptivas, la visualización de los datos y la identificación de tendencias y patrones.
+\subsection{Análisis Exploratorio de Datos (EDA)}
+\begin{itemize}
+    \item Exploramos los datos para identificar patrones, relaciones y posibles valores atípicos.
+    \item Graficamos los datos agrupados por mercado, región y categoría.
+\end{itemize}
 
-A continuación, se realizó una prueba de Dickey-Fuller aumentada para determinar si los datos eran estacionarios. Una serie estacionaria es aquella cuyas propiedades estadísticas, como la media y la varianza, no cambian con el tiempo.
+\subsection{Selección de Características}
+\begin{itemize}
+    \item Utilizamos métodos como ANOVA de valor F, valor F e información mutua para identificar las características más relevantes para predecir las ventas.
+    \item Las características clave incluyen ganancia, costo de envío, cantidad y descuento.
 
-Como los datos no eran estacionarios, se realizó una diferenciación de primer orden para hacerlos estacionarios.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\linewidth]{Imagenes articulo/Captura de pantalla 2024-07-22 162003.png} 
+    \caption{El gráfico muestra cómo la varianza explicada disminuye a medida que aumenta el número de componentes en un análisis de componentes principales (PCA).}
+    \label{fig:qqplot_profit}
+\end{figure}
+\end{itemize}
 
-Una vez que los datos fueron estacionarios, se realizó un análisis de autocorrelación y autocorrelación parcial para identificar los órdenes p y q del modelo ARIMA.
+\subsection{Modelado y Predicción}
+\begin{itemize}
+    \item Entrenamos modelos de predicción, como DecisionTreeRegressor y ARIMA, para estimar los beneficios negativos en las ventas.
+    \item Evaluamos los modelos utilizando métricas como el error cuadrático medio (MSE) y el error absoluto medio (MAE).
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\linewidth]{Imagenes articulo/Captura de pantalla 2024-07-22 162312.png} 
+    \caption{La gráfica muestra cómo el beneficio fluctúa a lo largo del tiempo, con todos los puntos de datos por debajo de la línea cero, lo que indica pérdidas consistentes durante el período observado.}
+    \label{fig:qqplot_profit}
+\end{figure}
 
-El orden p es el número de rezagos de la serie temporal que se incluyen en el modelo. El orden q es el número de rezagos de los errores de predicción que se incluyen en el modelo.
+\end{itemize}
 
-Después de identificar los órdenes p y q, se ajustó un modelo ARIMA a los datos. El modelo ajustado fue un ARIMA(2,1,3).
+\subsection{Segmentación de Datos}
+\begin{itemize}
+    \item Aplicamos técnicas de agrupación (clustering) como KMeans y DBSCAN para segmentar clientes y productos.
 
-El modelo ajustado se utilizó para pronosticar los profits futuros de la empresa para los próximos 12 meses.
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\linewidth]{Imagenes articulo/Captura de pantalla 2024-07-22 162100.png} 
+    \caption{“Clusters de Ventas vs. Ganancias”. Muestra una correlación positiva entre las ventas y las ganancias, con la mayoría de los puntos de datos concentrados hacia el extremo inferior de los valores de ventas y ganancias..}
+    \label{fig:qqplot_profit}
+\end{figure}
+\end{itemize}
 
-\section{Análisis de Clustering}
-Se realizó un análisis de clustering utilizando el algoritmo K-means, determinando el número óptimo de clusters mediante el método del codo y el índice de Davies-Bouldin. También se aplicó el algoritmo DBSCAN y se evaluó su rendimiento utilizando diversas métricas. Los resultados obtenidos con ambos métodos fueron comparados y discutidos para identificar la mejor estrategia de segmentación.
+%% Sección de Resultados
+\section*{Resultados}
+Durante nuestro análisis exhaustivo, exploramos un conjunto de datos utilizando diversas técnicas de análisis de datos y aprendizaje automático. A continuación, detallo los hallazgos clave:
 
-\section{Métodos de Pronóstico para Series Temporales Geográficas}
-Se resumió el estudio de Huddleston, Porter y Brown sobre la previsión de eventos delictivos en Pittsburgh, destacando el uso de modelos ARIMA y métodos de pronóstico de arriba hacia abajo. Se discutió la importancia de seleccionar el método de pronóstico adecuado según las necesidades específicas del análisis y las capacidades del analista.
+\begin{enumerate}
+    \item \textbf{Exploración Inicial de Datos:} Realizamos una carga inicial del conjunto de datos y llevamos a cabo una exploración detallada. Observamos las ventas agrupadas por categorías relevantes, como región, producto o segmento de clientes. Los gráficos de barras nos permitieron visualizar estas agrupaciones y comprender las tendencias iniciales.
+    \item \textbf{Análisis Estadístico:} Calculamos estadísticas descriptivas para las columnas clave. Por ejemplo, examinamos la distribución de la "Ganancia", el "Costo de envío", la "Cantidad" y el "Descuento". Además, realizamos pruebas de normalidad para evaluar la validez de nuestras suposiciones.
+    \item \textbf{Selección de Características Relevantes:} Utilizamos métodos de selección de características para identificar aquellas que más influyen en las ventas. Las características más relevantes incluyeron "Ganancia", "Costo de envío", "Cantidad" y "Descuento". Estas variables desempeñaron un papel crucial en la predicción de las ventas futuras.
+    \item \textbf{Análisis de Clustering:} Aplicamos técnicas de clustering para agrupar productos o clientes con características similares. Determinamos el número óptimo de clusters y evaluamos su coherencia. Estos grupos nos proporcionaron información valiosa sobre patrones de comportamiento y preferencias.
+    \item \textbf{Análisis de Series Temporales:} Utilizamos el modelo ARIMA para comprender las tendencias a lo largo del tiempo. Esto nos permitió predecir los beneficios negativos de la empresa y tomar decisiones informadas.
+    \item \textbf{Modelos de Clasificación:} Entrenamos y evaluamos varios modelos de clasificación. Estos incluyeron Naive Bayes, Análisis Discriminante Lineal, Árbol de Decisión, Random Forest y Regresión Logística. Cada modelo proporcionó información sobre la probabilidad de ventas y nos ayudó a identificar patrones ocultos.
+    \item \textbf{Análisis Detallado de Registros con Profit Negativo:} Profundizamos en los registros con profit negativo. Mediante técnicas de clustering, identificamos segmentos específicos que contribuían significativamente a esta situación. Además, entrenamos un modelo DecisionTreeRegressor para comprender las relaciones entre las características y el profit negativo.
+\end{enumerate}
 
-\section{Resultados}
+\begin{thebibliography}{99}
 
-El análisis exploratorio de los datos mostró que los profits negativos de la empresa habían aumentado significativamente en los últimos años. Esto se debía principalmente a una disminución en las ventas y un aumento en los costos.
+\bibitem{Fildes2022}
+Fildes, R., Ma, S., \& Kolassa, S. (2022). Retail forecasting: Research and practice. \textit{International Journal of Forecasting}, 38(4), 1283-1318.
 
-La prueba de Dickey-Fuller aumentada mostró que los datos no eran estacionarios. Esto se debía a la presencia de una tendencia y una estacionalidad en los datos.
+\bibitem{Boone2019}
+Boone, T., Ganeshan, R., Jain, A., \& Sanders, N. R. (2019). Forecasting sales in the supply chain: Consumer analytics in the big data era. \textit{International Journal of Forecasting}, 35(1), 170-180.
 
-Después de realizar una diferenciación de primer orden, los datos se hicieron estacionarios.
+\bibitem{Fleischmann2003}
+Fleischmann, M., Hall, J. M., \& Pyke, D. F. (2003). Smart pricing: linking pricing decisions with operational insights. \textit{Available at SSRN 496708}.
 
-El análisis de autocorrelación y autocorrelación parcial mostró que los órdenes p y q del modelo ARIMA eran 2 y 3, respectivamente.
+\bibitem{Kontopoulou2023}
+Kontopoulou, V. I., Nikou, C., Chatzis, S. P., \& Dagiuklas, T. (2023). A review of ARIMA vs. machine learning approaches for time series forecasting in data driven networks. \textit{Future Internet}, 15(8), 255.
 
-El modelo ARIMA(2,1,3) ajustado a los datos tuvo un buen desempeño. El modelo pudo explicar el 95\% de la variación en los datos.
+\bibitem{Schmidt2022}
+Schmidt, A., Kabir, M. W. U., \& Hoque, M. T. (2022). Machine learning based restaurant sales forecasting. \textit{Machine Learning and Knowledge Extraction}, 4(1), 105-130.
 
-El modelo ajustado se utilizó para pronosticar los profits futuros de la empresa para los próximos 12 meses. Los pronósticos mostraron que los profits negativos de la empresa continuarían aumentando en los próximos meses.
+\bibitem{Singh2020}
+Singh, K., Booma, P. M., \& Eaganathan, U. (2020). E-commerce system for sale prediction using machine learning technique. \textit{Journal of Physics: Conference Series}, 1712(1), IOP Publishing.
 
-\section{Discusión}
+\bibitem{Gonzalez-Briones2019}
+Gonzalez-Briones, A., Sarabia-Jacome, D., De-La-Hoz-Franco, E., Villarrubia, G., \& Corchado, J. M. (2019). Machine learning models for electricity consumption forecasting: a review. In \textit{2019 2nd International Conference on Computer Applications \& Information Security (ICCAIS)} (pp. 1-6). IEEE.
 
-Los resultados de este estudio muestran que los profits negativos de la empresa han aumentado significativamente en los últimos años. Esto se debe principalmente a una disminución en las ventas y un aumento en los costos.
+\bibitem{Rogers1992}
+Rogers, D. (1992). A review of sales forecasting models most commonly applied in retail site evaluation. \textit{International Journal of Retail \& Distribution Management}, 20(4), 3-9.
 
-El modelo ARIMA ajustado a los datos pudo explicar el 95\% de la variación en los datos. Esto indica que el modelo es un buen predictor de los profits futuros de la empresa.
+\bibitem{Lasek2016}
+Lasek, A. C. N. S. J., Cercone, N., \& Saunders, J. (2016). Smart restaurants: survey on customer demand and sales forecasting. In \textit{Smart cities and homes} (pp. 361-386). 
 
-Los pronósticos del modelo muestran que los profits negativos de la empresa continuarán aumentando en los próximos meses. Esto es una preocupación para la empresa, ya que podría conducir a una disminución en la rentabilidad y la sostenibilidad.
+\bibitem{Newbold1983}
+Newbold, P. (1983). ARIMA model building and the time series analysis approach to forecasting. \textit{Journal of forecasting}, \textit{2}(1), 23-35.
 
-La empresa debe tomar medidas para abordar las causas subyacentes del aumento de los profits negativos. Esto podría incluir aumentar las ventas, reducir los costos o una combinación de ambas.
+\bibitem{Mondal2014}
+Mondal, P., Shit, L., \& Goswami, S. (2014). Study of effectiveness of time series modeling (ARIMA) in forecasting stock prices. \textit{International Journal of Computer Science, Engineering and Applications}, \textit{4}(2), 13.
 
-Si la empresa no toma medidas para abordar las causas subyacentes del aumento de los profits negativos, es probable que la empresa continúe perdiendo dinero en el futuro.
+\bibitem{Khan2020}
+Khan, S., \& Alghulaiakh, H. (2020). ARIMA model for accurate time series stocks forecasting. \textit{International Journal of Advanced Computer Science and Applications}, \textit{11}(7).
 
-\section{Conclusión}
-Los resultados de este estudio proporcionan insights valiosos sobre la segmentación de clientes y productos, así como sobre la previsión de eventos en series temporales geográficas. La combinación de técnicas de clustering y métodos de pronóstico robustos puede mejorar significativamente la toma de decisiones en contextos de ventas y otros campos similares.
+\bibitem{Allard1998}
+Allard, R. (1998). Use of time-series analysis in infectious disease surveillance. \textit{Bulletin of the World Health Organization}, \textit{76}(4), 327.
 
-\section*{Agradecimientos}
-Se agradece a la Universidad Universidad Autonoma de Nuevo León por el apoyo brindado para la realización de este estudio.
+\bibitem{Shi2012}
+Shi, J., Guo, J., \& Zheng, S. (2012). Evaluation of hybrid forecasting approaches for wind speed and power generation time series. \textit{Renewable and Sustainable Energy Reviews}, \textit{16}(5), 3471-3480.
 
-\section*{Referencias}
-\bibliographystyle{elsarticle-harv}
-\bibliography{referencias}
+\end{thebibliography}
 
-% Ejemplo de entradas en el archivo .bib
-@article{Huddleston2024,
-  title={Improving forecasts for noisy geographic time series},
-  author={Huddleston, Samuel H and Porter, John H and Brown, Donald E},
-  journal={Journal of Business Research},
-  year={2024},
-  volume={38},
-  number={4},
-  pages={567--584},
-  publisher={Elsevier}
-}
-
-@book{Makridakis1983,
-  title={Forecasting Methods and Applications},
-  author={Makridakis, Spyros and Wheelwright, Steven C and McGee, Victor E},
-  year={1983},
-  publisher={Wiley}
-}
-
-@article{Gorr2003,
-  title={Crime forecasting using ARIMA and ARIMAX models},
-  author={Gorr, Wilpen L and Olligschlaeger, Andreas M and Thompson, Yvonne},
-  journal={International Journal of Forecasting},
-  year={2003},
-  volume={19},
-  number={4},
-  pages={571--594},
-  publisher={Elsevier}
-}
-
+%% Fin del documento
 \end{document}
